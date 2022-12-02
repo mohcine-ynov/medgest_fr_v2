@@ -13,6 +13,7 @@ import {
 
 } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
+import Doctors from './components/Doctors/Doctors';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Routes>
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/connexion" element={<Connexion />} />
+          <Route path="/doctors" element={<Doctors />} />
         </Routes>
       </div>
     </Router>
