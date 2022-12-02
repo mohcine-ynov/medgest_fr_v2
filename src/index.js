@@ -4,10 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Inscription from "./components/Inscription/Inscription";
+import Connexion from "./components/connexion/Connexion";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+
+} from "react-router-dom";
+import Navbar from './components/Navbar/Navbar';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Navbar />
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/inscription" element={<Inscription />} />
+          <Route path="/connexion" element={<Connexion />} />
+        </Routes>
+      </div>
+    </Router>
   </React.StrictMode>
 );
 
